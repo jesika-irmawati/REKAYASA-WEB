@@ -1,0 +1,829 @@
+/* ==============================
+   GENERAL STYLE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #FFF5F9;
+    color: #4A3540;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.app-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.main-header {
+    background-color: #FCE7F3;
+    padding: 25px 6% 18px;
+    color: #831843;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #DB2777;
+    color: #FFFFFF;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.brand h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #831843;
+}
+
+.brand p {
+    font-size: 14px;
+    color: #9D174D;
+}
+
+.header-info {
+    background-color: #F5D0E5;
+    color: #831843;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.main-nav {
+    background-color: #FCE7F3;
+    padding: 8px 6% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 1px solid #F5D0E5;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #831843;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #DB2777;
+    border-bottom: 3px solid #F9A8D4;
+}
+
+.main-nav a.active {
+    color: #DB2777;
+    border-bottom: 3px solid #DB2777;
+}
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+
+.main-content {
+    width: 88%;
+    max-width: 1200px;
+    margin: 35px auto;
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(131, 24, 67, 0.06);
+    border: 1px solid #F5D0E5;
+}
+
+.main-content h1,
+.main-content h2 {
+    color: #831843;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 22px;
+    background-color: #FFFFFF;
+    border: 1px solid #EFAFCB;
+}
+
+table th {
+    background-color: #FCE7F3;
+    color: #831843;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: 1px solid #EFAFCB;
+}
+
+table td {
+    padding: 14px 10px;
+    border: 1px solid #F0C4D8;
+    color: #4A3540;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #FFFAFC;
+}
+
+table tbody tr:hover {
+    background-color: #FFF0F6;
+}
+
+/* ==============================
+   BUTTONS AND LINKS
+============================== */
+
+button,
+.btn,
+input[type="submit"] {
+    display: inline-block;
+    border: none;
+    background-color: #DB2777;
+    color: #FFFFFF;
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+    background-color: #BE185D;
+}
+
+a {
+    transition: 0.3s;
+}
+
+.main-content a:not(.btn) {
+    color: #DB2777;
+}
+
+/* ==============================
+   FORM
+============================== */
+
+form {
+    max-width: 700px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #831843;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #F5D0E5;
+    border-radius: 8px;
+    background-color: #FFFAFC;
+    color: #4A3540;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #DB2777;
+    box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.12);
+    background-color: #FFFFFF;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.main-footer {
+    background-color: #FCE7F3;
+    color: #831843;
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+    margin-top: auto;
+    border-top: 1px solid #F5D0E5;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 18px 5%;
+    }
+
+    .brand h2 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 12px;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .header-info {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+
+    .main-nav {
+        padding: 8px 3% 18px;
+        gap: 8px;
+        overflow-x: auto;
+    }
+
+    .main-nav a {
+        padding: 10px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .main-content {
+        width: 94%;
+        padding: 18px;
+        margin: 22px auto;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
+/* ==============================
+   PRODUCT HEADER
+============================== */
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.product-heading h1 {
+    color: #831843;
+    font-size: 28px;
+    margin-bottom: 3px;
+}
+
+.product-heading p {
+    color: #94647B;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.product-header .btn {
+    background-color: #DB2777;
+    color: #FFFFFF;
+    padding: 11px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.product-header .btn:hover {
+    background-color: #BE185D;
+}
+
+@media (max-width: 600px) {
+    .product-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .product-heading h1 {
+        font-size: 23px;
+    }
+
+    .product-header .btn {
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+}
+.brand-image {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+.action-buttons a {
+    display: block;
+}
+
+.action-buttons button {
+    display: block;
+}
+/* EDIT PRODUCT */
+
+.edit-header {
+    margin-bottom: 25px;
+}
+
+.edit-header h1 {
+    color: #831843;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.edit-header p {
+    color: #94647B;
+    font-size: 14px;
+}
+
+.edit-form-container {
+    width: 100%;
+}
+
+.edit-form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: #831843;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #EFAFCB;
+    border-radius: 8px;
+    background-color: #FFFAFC;
+    color: #4A3540;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input {
+    height: 48px;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: none;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #DB2777;
+    box-shadow: 0 0 0 3px #FCE7F3;
+}
+
+/* EDIT PRODUCT */
+
+.edit-header {
+    margin-bottom: 25px;
+}
+
+.edit-header h1 {
+    color: #831843;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.edit-header p {
+    color: #94647B;
+    font-size: 14px;
+}
+
+/* FORM CONTAINER */
+
+.edit-form-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.edit-form {
+    width: 100%;
+}
+
+/* INPUT FIELDS */
+
+.edit-form .form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.edit-form .form-group label {
+    display: block;
+    color: #831843;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.edit-form .form-group input,
+.edit-form .form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #EFAFCB;
+    border-radius: 8px;
+    background-color: #FFFAFC;
+    color: #4A3540;
+    font-size: 14px;
+    outline: none;
+}
+
+.edit-form .form-group input {
+    height: 48px;
+}
+
+.edit-form .form-group textarea {
+    height: 130px;
+    resize: none;
+    font-family: inherit;
+}
+
+/* INPUT FOCUS */
+
+.edit-form .form-group input:focus,
+.edit-form .form-group textarea:focus {
+    border-color: #DB2777;
+    box-shadow: 0 0 0 3px #FCE7F3;
+}
+
+/* CANCEL AND UPDATE BUTTONS */
+
+.edit-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-cancel,
+.btn-update {
+    width: 110px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background-color: #FFFFFF;
+    color: #831843;
+    border: 1px solid #DB2777;
+}
+
+.btn-update {
+    background-color: #DB2777;
+    color: #FFFFFF;
+    border: 1px solid #DB2777;
+}
+/* MEMBUAT KOLOM EDIT PRODUCT RATA KIRI DAN KANAN */
+
+.edit-form-container {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.edit-form {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.edit-form .form-group {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.edit-form .form-group input,
+.edit-form .form-group textarea {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box;
+}
+
+/* TOMBOL TETAP DI TENGAH */
+.edit-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+/* ADD STOCK SELECT */
+
+.edit-form .form-group select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #EFAFCB;
+    border-radius: 8px;
+    background-color: #FFFAFC;
+    color: #4A3540;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-form .form-group select:focus {
+    border-color: #DB2777;
+    box-shadow: 0 0 0 3px #FCE7F3;
+}
+.edit-form .form-group select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #EFAFCB;
+    border-radius: 8px;
+    background-color: #FFFAFC;
+    color: #4A3540;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+/* ==============================
+   FIXED AND CONSISTENT LAYOUT
+============================== */
+
+/* Menjaga lebar halaman tetap stabil */
+html {
+    overflow-y: scroll;
+}
+
+/* Kerangka utama */
+.app-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header tetap konsisten */
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation tetap pada posisinya */
+.main-nav {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+/* Area konten memiliki ukuran konsisten */
+.main-content {
+    width: 88%;
+    max-width: 1200px;
+    margin: 35px auto;
+    flex: 1 0 auto;
+    box-sizing: border-box;
+}
+
+/* Form selalu menggunakan lebar area konten */
+.edit-form-container {
+    width: 100%;
+    max-width: none;
+}
+
+.edit-form {
+    width: 100%;
+    max-width: none;
+}
+
+.edit-form .form-group {
+    width: 100%;
+}
+
+.edit-form .form-group input,
+.edit-form .form-group textarea,
+.edit-form .form-group select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tombol selalu berada di tengah */
+.edit-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-image {
+    display: block;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+/* ==============================
+   SUCCESS FEEDBACK MODAL
+============================== */
+
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.feedback-modal {
+    width: 100%;
+    max-width: 380px;
+    background-color: #FFFFFF;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: modalAppear 0.3s ease;
+}
+
+.feedback-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    background-color: #FCE7F3;
+    color: #DB2777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.feedback-modal h2 {
+    color: #831843;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.feedback-modal p {
+    color: #4A3540;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.feedback-modal button {
+    width: 100%;
+    padding: 11px;
+    background-color: #DB2777;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.feedback-modal button:hover {
+    background-color: #BE185D;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Center Alignment for Stock Type and Quantity */
+
+.stock-center {
+    text-align: center;
+}
+.transaction-center {
+    text-align: center;
+}
+.number-center {
+    text-align: center;
+}
