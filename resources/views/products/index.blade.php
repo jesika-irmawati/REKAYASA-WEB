@@ -1,14 +1,18 @@
 @extends('layout')
+
 @section('content')
+
 <div class="product-header">
     <div class="product-heading">
         <h1>Products</h1>
         <p>Manage your product inventory</p>
     </div>
+
     <a href="{{ route('products.create') }}" class="btn">
         + Add Product
     </a>
 </div>
+
 <table>
     <thead>
         <tr>
@@ -19,6 +23,7 @@
             <th>Action</th>
         </tr>
     </thead>
+
     <tbody>
         @foreach($products as $index => $item)
         <tr>
@@ -26,9 +31,10 @@
             <td>{{ $item->name }}</td>
             <td>{{ $item->description }}</td>
             <td>Rp {{ number_format($item->price, 0, ',', '.') }}</td>
+
             <td>
                 <div class="action-buttons">
-                    <a href="{{ route('products.edit', $item->id) }}">
+                    <a href="{{ route('products.edit', $item->id) }}" class="btn-edit">
                         Edit
                     </a>
 

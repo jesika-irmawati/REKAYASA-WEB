@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('content')
 
 <div class="product-header">
@@ -31,16 +30,15 @@
             <td>{{ $stock->product->name }}</td>
             <td class="stock-center">{{ ucfirst($stock->type) }}</td>
             <td class="stock-center">{{ $stock->quantity }}</td>
+
             <td>
                 <div class="action-buttons">
-
-                    <a href="{{ route('stocks.edit', $stock->id) }}">
+                    <a href="{{ route('stocks.edit', $stock->id) }}" class="btn-edit">
                         Edit
                     </a>
 
                     <form action="{{ route('stocks.destroy', $stock->id) }}"
                           method="POST">
-
                         @csrf
                         @method('DELETE')
 
@@ -48,9 +46,7 @@
                                 onclick="return confirm('Are you sure you want to delete this stock?')">
                             Delete
                         </button>
-
                     </form>
-
                 </div>
             </td>
         </tr>

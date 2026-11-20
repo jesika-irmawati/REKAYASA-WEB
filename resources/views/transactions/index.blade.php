@@ -1,14 +1,17 @@
 @extends('layout')
 @section('content')
+
 <div class="product-header">
     <div class="product-heading">
         <h1>Transactions</h1>
         <p>Manage your product transactions.</p>
     </div>
+
     <a href="{{ route('transactions.create') }}" class="btn">
         + Add Transaction
     </a>
 </div>
+
 <table>
     <thead>
         <tr>
@@ -19,6 +22,7 @@
             <th>Action</th>
         </tr>
     </thead>
+
     <tbody>
         @foreach($transactions as $index => $t)
         <tr>
@@ -28,10 +32,11 @@
             <td class="transaction-center">
                 {{ $t->status ? 'Completed' : 'Pending' }}
             </td>
+
             <td>
                 <div class="action-buttons">
 
-                    <a href="{{ route('transactions.edit', $t->id) }}">
+                    <a href="{{ route('transactions.edit', $t->id) }}" class="btn-edit">
                         Edit
                     </a>
 
